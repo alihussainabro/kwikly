@@ -1,0 +1,12 @@
+name: Ali's First CI-CD
+on: [push] # Maqsad: Jab bhi code push ho, ye chale
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # GitHub aik free Linux computer on karega
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Aapka code us computer mein load hoga
+
+      - name: Greeting
+        run: echo "Hello Ali Hussain! Your CI/CD pipeline is working."
